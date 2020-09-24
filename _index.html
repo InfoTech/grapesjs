@@ -18,11 +18,75 @@
   <body>
     <div id="gjs">
       <mjml>
+        <mj-head>
+          <mj-style>
+            .link-white {
+              color: #ffffff;
+              text-decoration: none !important;
+            }
+      
+            .link-dark-grey {
+              color: #212121;
+              text-decoration: none !important;
+            }
+      
+            .link-nostyle {
+              color: #bebdbd;
+              text-decoration: none !important;
+            }
+      
+            .link-nostyle-dark {
+              color: #878787;
+              text-decoration: none !important;
+            }
+      
+            .link-open-in-browser {
+              color: #4a4a4a;
+              text-decoration: underline !important;
+            }
+      
+            .link-unsubscribe-mcleanco {
+              color: #878787;
+              text-decoration: none !important;
+            }
+      
+            .mclean-purple-bold {
+              font-weight: 900;
+              color: #414399;
+            }
+      
+            .itrg-heading-normal {
+              font-weight: 300;
+              color: #4a4a4a;
+            }
+      
+            .itrg-heading-bold {
+              font-weight: 900;
+              color: #7d7d7d;
+            }
+      
+            .itrg-heading-bold-blue {
+              font-weight: 900;
+              color: #2576b7;
+            }
+      
+            .itrg-heading-bold-dark {
+              font-weight: 900;
+              color: #212121;
+            }
+      
+            @media only screen and (max-width: 479px) {
+              .hide-border-right {
+                border-right: none !important;
+              }
+            }
+          </mj-style>
+        </mj-head>
         <mj-body>
           <!-- Your MJML body here -->
           <mj-section>
             <mj-column>
-              <mj-text>My Company</mj-text>
+              <mj-text>Lorem Ipsum</mj-text>
             </mj-column>
           </mj-section>
         </mj-body>
@@ -68,26 +132,101 @@
         },
       });
 
-      editor.BlockManager.add('4Columns', {
-        label: '4 Columns',
-        attributes: { class:'' },
-        content: `<mj-column>
-        <mj-text>Content 1
-        </mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text>Content 2
-        </mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text>Content 3
-        </mj-text>
-      </mj-column>
-      <mj-column>
-        <mj-text>Content 4
-        </mj-text>
-      </mj-column>`
-      })
+editor.BlockManager.add('4Columns', {
+  label: '4 Columns',
+  attributes: { class:'' },
+  content: '<mj-column><mj-text>Content 1</mj-text></mj-column><mj-column><mj-text>Content 2</mj-text></mj-column><mj-column><mj-text>Content 3</mj-text></mj-column><mj-column><mj-text>Content 4</mj-text></mj-column>'
+})
+
+editor.BlockManager.add('itrglogo', {
+  label: 'ITRG Logo',
+  attributes: { class:'' },
+  content: `<mj-image src="https://storage.pardot.com/131451/116658/itrg_blue_900.png" href="https://www.infotech.com" alt="Info-Tech Research Group" />`
+})
+
+editor.BlockManager.add('mcleanlogo', {
+  label: 'McLean Logo',
+  attributes: { class:'' },
+  content: `<mj-image src="https://storage.pardot.com/131451/119532/McLean_Logo.png" href="https://www.mcleanco.com" alt="Info-Tech Research Group" />`
+})
+
+editor.BlockManager.add('itrgfooter', {
+  label: 'ITRG Footer',
+  attributes: { class:'' },
+  content: `<mj-wrapper padding="10px 0 50px 0">
+      <mj-section>
+        <mj-column>
+          <mj-text align="center" padding="0 30px 0 30px" font-weight="300" font-size="12px" line-height="14px" font-family="Roboto, Arial, Helvetica, sans-serif" color="#212121">
+            <a href="http://www.infotech.com/mycontent/recent" class="link-dark-grey" color="#212121">Home</a> |
+            <a href="http://www.infotech.com/terms/privacy?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Privacy Policy</a> |
+            <a href="http://www.infotech.com/terms?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Terms of Use</a> |
+            <a href="http://www.infotech.com/userpreferences?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Email Preferences</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column>
+          <mj-spacer height="5px" />
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0 0 20px 0">
+        <mj-column>
+          <mj-text padding="0 30px 0 30px" align="center" font-size="12px" line-height="16px" font-weight="300" font-family="Roboto, Arial, Helvetica, sans-serif" color="#666666">
+            &copy; 1997-2020 Info-Tech Research Group. All rights reserved.
+          </mj-text>
+          <mj-text padding="0 30px 0 30px" align="center" font-size="12px" line-height="16px" font-weight="300" font-family="Roboto, Arial, Helvetica, sans-serif" color="#666666">
+            345 Ridout Street North London, ON, Canada N6A2N8
+          </mj-text>
+          <mj-text padding="0 30px 0 30px" align="center" font-weight="300" font-size="12px" font-family="Roboto, Arial, Helvetica, sans-serif" color="#efefef">
+            <div style="display: none; opacity: none; height: 0; line-height: 0;"><a href="%%email_preference_center_434%%" style="color: #efefef !important;">Click Here</a> if you no longer want to receive emails.</div>
+          </mj-text>
+          <mj-image src="https://storage.pardot.com/131451/116658/itrg_blue_900.png" href="https://www.infotech.com/kip" padding-top="20px" width="135px" alt="Info-Tech Research Group" />
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>`
+})
+
+editor.BlockManager.add('mcleanfooter', {
+  label: 'McLean Footer',
+  attributes: { class:'' },
+  content: `<mj-wrapper padding="10px 0 50px 0">
+      <mj-section>
+        <mj-column>
+          <mj-text align="center" padding="0 30px 0 30px" font-weight="300" font-size="12px" line-height="14px" font-family="Roboto, Arial, Helvetica, sans-serif" color="#212121">
+            <a href="http://www.infotech.com/mycontent/recent" class="link-dark-grey" color="#212121">Home</a> |
+            <a href="http://www.infotech.com/terms/privacy?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Privacy Policy</a> |
+            <a href="http://www.infotech.com/terms?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Terms of Use</a> |
+            <a href="http://www.infotech.com/userpreferences?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Email Preferences</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0">
+        <mj-column>
+          <mj-spacer height="5px" />
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0 0 20px 0">
+        <mj-column>
+          <mj-text padding="0 30px 0 30px" align="center" font-size="12px" line-height="16px" font-weight="300" font-family="Roboto, Arial, Helvetica, sans-serif" color="#666666">
+            &copy; 1997-2020 McLean &amp; Company Research Group. All rights reserved.
+          </mj-text>
+          <mj-text padding="0 30px 0 30px" align="center" font-size="12px" line-height="16px" font-weight="300" font-family="Roboto, Arial, Helvetica, sans-serif" color="#666666">
+            345 Ridout Street North London, ON, Canada N6A2N8
+          </mj-text>
+          <mj-text padding="0 30px 0 30px" align="center" font-weight="300" font-size="12px" font-family="Roboto, Arial, Helvetica, sans-serif" color="#efefef">
+            <div style="display: none; opacity: none; height: 0; line-height: 0;"><a href="%%email_preference_center_434%%" style="color: #efefef !important;">Click Here</a> if you no longer want to receive emails.</div>
+          </mj-text>
+          <mj-image src="https://storage.pardot.com/131451/119532/McLean_Logo.png" href="https://www.mcleanco.com" padding-top="20px" width="135px" alt="McLean &amp; Company" />
+        </mj-column>
+      </mj-section>
+
+    </mj-wrapper>`
+})
 
       
     </script>
