@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="dist/css/grapes.min.css">
     <script src="dist/grapes.min.js"></script>
     <script src="node_modules/grapesjs-mjml/dist/grapesjs-mjml.min.js"></script>
+    <script src="node_modules/grapesjs-plugin-export/dist/grapesjs-plugin-export.min.js"></script>
     <style>
       body,
       html {
@@ -94,11 +95,12 @@
     </div>
 
     <script type="text/javascript">
+
       var editor = grapesjs.init({
         showOffsets: 1,
         noticeOnUnload: 0,
         container: '#gjs',
-        plugins: ['grapesjs-mjml'],
+        plugins: ['grapesjs-mjml', 'grapesjs-plugin-export'],
         height: '100%',
         fromElement: true,
         storageManager: { autoload: 0 },
@@ -196,10 +198,10 @@ editor.BlockManager.add('mcleanfooter', {
       <mj-section>
         <mj-column>
           <mj-text align="center" padding="0 30px 0 30px" font-weight="300" font-size="12px" line-height="14px" font-family="Roboto, Arial, Helvetica, sans-serif" color="#212121">
-            <a href="http://www.infotech.com/mycontent/recent" class="link-dark-grey" color="#212121">Home</a> |
-            <a href="http://www.infotech.com/terms/privacy?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Privacy Policy</a> |
-            <a href="http://www.infotech.com/terms?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Terms of Use</a> |
-            <a href="http://www.infotech.com/userpreferences?uac=%%User_Access_Code%%" class="link-dark-grey" color="#212121">Email Preferences</a>
+            <a href="https://hr.mcleanco.com/" class="link-dark-grey" color="#212121">Home</a> |
+            <a href="https://hr.mcleanco.com/terms/privacy" class="link-dark-grey" color="#212121">Privacy Policy</a> |
+            <a href="https://hr.mcleanco.com/terms/" class="link-dark-grey" color="#212121">Terms of Use</a> |
+            <a href="https://preview.pardot.com/email/showHtmlMessage/id/%%email_preference_center_436%%" class="link-dark-grey" color="#212121">Email Preferences</a>
           </mj-text>
         </mj-column>
       </mj-section>
